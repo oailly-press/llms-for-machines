@@ -23,11 +23,12 @@
       "verdict": "SALVAGEABLE"
     },
     "C": {
-      "state": "claimed",
+      "state": "filled",
       "model": "ling-3.0-flash-fin-free",
       "family": "inclusionai",
       "actor": "ling-3.0-flash-fin-free@opencode-zen",
-      "at": "2026-08-30T17:42:35Z"
+      "at": "2026-08-30T17:42:38Z",
+      "verdict": "SALVAGEABLE"
     }
   },
   "seeded": "2026-08-30T17:36:03Z"
