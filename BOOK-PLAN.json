@@ -1,0 +1,105 @@
+{
+  "title": "LLMs for Machines",
+  "tier": "standard",
+  "target_per_chapter": 7000,
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Machines Without Language",
+      "file": "ch01-machines-without-language.md",
+      "purpose": "Name the book-shaped hole: a century of digitizing machines produced protocols, historians, and SCADA — not language. Position this volume as the broad field guide that Industrial Nº 1 and Nº 2 earned the right to open, state the audience and hard boundaries in plain text, and explain why local, disclosed, measurable systems beat cloud folklore at the physical interface.",
+      "done": false
+    },
+    {
+      "number": 2,
+      "title": "What a Language Model Is Allowed to Touch",
+      "file": "ch02-what-a-language-model-is-allowed-to-touch.md",
+      "purpose": "Give a machine-owner's model of tokens, context, sampling, hallucination, and constrained decoding without ML jargon. Draw the authority frontier: read vs suggest vs act. Teach why free-text answers are the wrong default next to equipment and why schemas, enums, and abstention are the load-bearing primitives.",
+      "done": false
+    },
+    {
+      "number": 3,
+      "title": "Sensors and the Signal Path",
+      "file": "ch03-sensors-and-the-signal-path.md",
+      "purpose": "Walk from physical phenomenon to bytes a model can read: transducers, conditioning, sampling, units, calibration, missingness, and the lies a clean JSON object can tell about a dirty sensor. Show how language models fail when they treat a tag value as a sentence instead of a measurement with a history.",
+      "done": false
+    },
+    {
+      "number": 4,
+      "title": "Protocols as Text",
+      "file": "ch04-protocols-as-text.md",
+      "purpose": "Treat Modbus, CAN/J1939, OPC UA, MQTT/Sparkplug, syslog, and Prometheus exposition as languages with grammars. Show frame-level reading, register maps as vocabularies, and why a model that emits a typed fault assertion with a confidence margin beats a chatbot paraphrase of a hex dump.",
+      "done": false
+    },
+    {
+      "number": 5,
+      "title": "Plants and Brownfield",
+      "file": "ch05-plants-and-brownfield.md",
+      "purpose": "Widen Industrial Nº 1 beyond a single plant story: brownfield historians, air gaps, CMMS, shift handoffs, and the political economy of changing anything that already runs. Map where a local model helps (manuals, fault codes, triage) and where it must stay read-only.",
+      "done": false
+    },
+    {
+      "number": 6,
+      "title": "Vehicles and Mobile Equipment",
+      "file": "ch06-vehicles-and-mobile-equipment.md",
+      "purpose": "Cover on-highway and off-highway equipment as first-class machine readers: J1939 spn/fmi vocabulary, telematics bandwidth, intermittent connectivity, operator safety, and why a model in the cab is not a model in a rack. Include the boundary between diagnostic assistance and vehicle control.",
+      "done": false
+    },
+    {
+      "number": 7,
+      "title": "Robots and Workcells",
+      "file": "ch07-robots-and-workcells.md",
+      "purpose": "Treat cells, teach pendants, robot controllers, vision coprocessors, and WMS handoffs as a multi-agent physical system. Show where language helps (procedure recall, alarm triage, change notes) and where motion planning, interlocks, and cycle time remain non-negotiably outside the LLM.",
+      "done": false
+    },
+    {
+      "number": 8,
+      "title": "Grids, Energy, and Continuous Process",
+      "file": "ch08-grids-energy-and-continuous-process.md",
+      "purpose": "Extend the field guide to generation, distribution, and continuous process: slow dynamics, regulatory logging, historian density, alarm floods, and why abstention and audit trails matter more when the blast radius is regional rather than a single line.",
+      "done": false
+    },
+    {
+      "number": 9,
+      "title": "Buildings, Facilities, and the Quiet Majority",
+      "file": "ch09-buildings-facilities-and-the-quiet-majority.md",
+      "purpose": "Cover HVAC, elevators, labs, hospitals, warehouses, and the BACnet/LonWorks/MQTT world where most machines actually live. Argue that the volume market for machine-reading LLMs is not the showcase robot cell — it is the quiet equipment that only gets attention when it fails.",
+      "done": false
+    },
+    {
+      "number": 10,
+      "title": "Where the Model Runs",
+      "file": "ch10-where-the-model-runs.md",
+      "purpose": "Give a geography of deployment: sensor-adjacent MCU class (not LLM), gateway/Pi class, industrial PC, on-site GPU box, plant datacenter, and the rare justified cloud path. Tie cost, latency, data residency, and version-pinning to hardware rungs without repeating Industrial Nº 2 chapter-for-chapter.",
+      "done": false
+    },
+    {
+      "number": 11,
+      "title": "Authority, Interlocks, and Abstention",
+      "file": "ch11-authority-interlocks-and-abstention.md",
+      "purpose": "Make the physical-world authority problem explicit: who may suggest, who may act, what an interlock is, and why the most valuable model behavior next to equipment is often silence. Provide patterns for escalation to a human with enough context to decide.",
+      "done": false
+    },
+    {
+      "number": 12,
+      "title": "Measuring Models That Touch Machines",
+      "file": "ch12-measuring-models-that-touch-machines.md",
+      "purpose": "Port honest benchmarking into OT: holdout discipline, oracle checks, replay from historians, blast-radius tests, and why leaderboard scores are almost silent about plant fitness. Teach promotion packets a reliability engineer would sign.",
+      "done": false
+    },
+    {
+      "number": 13,
+      "title": "Failure Modes the Physical World Invents",
+      "file": "ch13-failure-modes-the-physical-world-invents.md",
+      "purpose": "Catalog failures that pure-software LLM books miss: clock skew, partial frame reads, sticky bits, maintenance overrides, wrong engineering units, silent sensor substitution, power events mid-inference, and operators who stop trusting a tool that cried wolf once.",
+      "done": false
+    },
+    {
+      "number": 14,
+      "title": "A Field Guide You Can Run",
+      "file": "ch14-a-field-guide-you-can-run.md",
+      "purpose": "Close with a printable, domain-agnostic checklist: pick the machine, map the read path, define the schema, choose the rung, wire abstention, measure before trust, refuse control paths you cannot certify, and leave the system legible for the next shift. State what this series still does not claim.",
+      "done": false
+    }
+  ]
+}

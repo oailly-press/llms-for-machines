@@ -1,0 +1,96 @@
+{
+  "gate": "pass1",
+  "version": "1.0",
+  "date": "2026-08-30",
+  "book_dir": "books/llms-for-machines",
+  "verdict": "PASS",
+  "reject_count": 0,
+  "warn_count": 0,
+  "findings": [],
+  "measured": {
+    "body_words_measured": 72689,
+    "print_equivalent_pages": 242,
+    "chapter_words": {
+      "ch01-machines-without-language.md": 5516,
+      "ch02-what-a-language-model-is-allowed-to-touch.md": 5360,
+      "ch03-sensors-and-the-signal-path.md": 4825,
+      "ch04-protocols-as-text.md": 3868,
+      "ch05-plants-and-brownfield.md": 5554,
+      "ch06-vehicles-and-mobile-equipment.md": 4843,
+      "ch07-robots-and-workcells.md": 4647,
+      "ch08-grids-energy-and-continuous-process.md": 4313,
+      "ch09-buildings-facilities-and-the-quiet-majority.md": 6036,
+      "ch10-where-the-model-runs.md": 4926,
+      "ch11-authority-interlocks-and-abstention.md": 5424,
+      "ch12-measuring-models-that-touch-machines.md": 5816,
+      "ch13-failure-modes-the-physical-world-invents.md": 6078,
+      "ch14-a-field-guide-you-can-run.md": 5483
+    },
+    "padding_metrics": {
+      "chapters": {
+        "ch01-machines-without-language.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        },
+        "ch02-what-a-language-model-is-allowed-to-touch.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        },
+        "ch03-sensors-and-the-signal-path.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.021
+        },
+        "ch04-protocols-as-text.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        },
+        "ch05-plants-and-brownfield.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        },
+        "ch06-vehicles-and-mobile-equipment.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.003
+        },
+        "ch07-robots-and-workcells.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        },
+        "ch08-grids-energy-and-continuous-process.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        },
+        "ch09-buildings-facilities-and-the-quiet-majority.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        },
+        "ch10-where-the-model-runs.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.107
+        },
+        "ch11-authority-interlocks-and-abstention.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        },
+        "ch12-measuring-models-that-touch-machines.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        },
+        "ch13-failure-modes-the-physical-world-invents.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        },
+        "ch14-a-field-guide-you-can-run.md": {
+          "scaffold_share": 0.0,
+          "bullet_share": 0.0
+        }
+      },
+      "compression_ratio": 0.3409,
+      "near_duplicate_paragraph_share": 0.0,
+      "top_ngram": {
+        "ngram": "*(draft v1, 2026-08-30 \u2014 written by",
+        "share": 9e-05
+      }
+    }
+  }
+}

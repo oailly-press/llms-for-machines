@@ -1,0 +1,273 @@
+{
+  "manifest_version": "1.0",
+  "book": {
+    "title": "LLMs for Machines",
+    "subtitle": "A field guide to language models in the physical world",
+    "tier": "standard",
+    "language": "en",
+    "audience": "Engineers, integrators, and operators who put software next to sensors, robots, vehicles, plants, grids, and buildings — and who need language models that stay honest at the physical interface. Assumes fluency with at least one machine domain and no ML research background.",
+    "edition": 1,
+    "series": "O'AILLY Industrial Series Nº 3",
+    "isbn": null
+  },
+  "structure": {
+    "word_count_body": 72689,
+    "print_equivalent_pages": 242,
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Machines Without Language",
+        "words": 5516,
+        "source_file": "ch01-machines-without-language.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "rogerai-labs"
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": "What a Language Model Is Allowed to Touch",
+        "words": 5360,
+        "source_file": "ch02-what-a-language-model-is-allowed-to-touch.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "rogerai-labs"
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title": "Sensors and the Signal Path",
+        "words": 4825,
+        "source_file": "ch03-sensors-and-the-signal-path.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "rogerai-labs"
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "title": "Protocols as Text",
+        "words": 3868,
+        "source_file": "ch04-protocols-as-text.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "rogerai-labs"
+          }
+        ]
+      },
+      {
+        "number": 5,
+        "title": "Plants and Brownfield",
+        "words": 5554,
+        "source_file": "ch05-plants-and-brownfield.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "rogerai-labs"
+          }
+        ]
+      },
+      {
+        "number": 6,
+        "title": "Vehicles and Mobile Equipment",
+        "words": 4843,
+        "source_file": "ch06-vehicles-and-mobile-equipment.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "rogerai-labs"
+          }
+        ]
+      },
+      {
+        "number": 7,
+        "title": "Robots and Workcells",
+        "words": 4647,
+        "source_file": "ch07-robots-and-workcells.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "rogerai-labs"
+          }
+        ]
+      },
+      {
+        "number": 8,
+        "title": "Grids, Energy, and Continuous Process",
+        "words": 4313,
+        "source_file": "ch08-grids-energy-and-continuous-process.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "rogerai-labs"
+          }
+        ]
+      },
+      {
+        "number": 9,
+        "title": "Buildings, Facilities, and the Quiet Majority",
+        "words": 6036,
+        "source_file": "ch09-buildings-facilities-and-the-quiet-majority.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "rogerai-labs"
+          }
+        ]
+      },
+      {
+        "number": 10,
+        "title": "Where the Model Runs",
+        "words": 4926,
+        "source_file": "ch10-where-the-model-runs.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "rogerai-labs"
+          }
+        ]
+      },
+      {
+        "number": 11,
+        "title": "Authority, Interlocks, and Abstention",
+        "words": 5424,
+        "source_file": "ch11-authority-interlocks-and-abstention.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "rogerai-labs"
+          }
+        ]
+      },
+      {
+        "number": 12,
+        "title": "Measuring Models That Touch Machines",
+        "words": 5816,
+        "source_file": "ch12-measuring-models-that-touch-machines.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "rogerai-labs"
+          }
+        ]
+      },
+      {
+        "number": 13,
+        "title": "Failure Modes the Physical World Invents",
+        "words": 6078,
+        "source_file": "ch13-failure-modes-the-physical-world-invents.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "rogerai-labs"
+          }
+        ]
+      },
+      {
+        "number": 14,
+        "title": "A Field Guide You Can Run",
+        "words": 5483,
+        "source_file": "ch14-a-field-guide-you-can-run.md",
+        "written_by": [
+          {
+            "model": "claude-fable-5",
+            "version": "claude-fable-5",
+            "operator": "rogerai-labs"
+          }
+        ]
+      }
+    ],
+    "has_glossary_or_index": true,
+    "code_listing_policy": "mixed"
+  },
+  "provenance": {
+    "written_by": [
+      {
+        "model": "claude-fable-5",
+        "version": "claude-fable-5",
+        "operator": "rogerai-labs"
+      }
+    ],
+    "grounded_in": [
+      {
+        "kind": "url",
+        "reference": "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+      },
+      {
+        "kind": "url",
+        "reference": "https://www.nist.gov/itl/ai-risk-management-framework"
+      },
+      {
+        "kind": "url",
+        "reference": "https://en.wikipedia.org/wiki/IEC_61508"
+      },
+      {
+        "kind": "url",
+        "reference": "https://www.modbus.org/modbus-specifications"
+      },
+      {
+        "kind": "url",
+        "reference": "https://www.sae.org/standards/content/j1939_201808/"
+      },
+      {
+        "kind": "url",
+        "reference": "https://projecteuclid.org/journals/annals-of-statistics/volume-7/issue-1/Bootstrap-Methods-Another-Look-at-the-Jackknife/10.1214/aos/1176344552.full"
+      },
+      {
+        "kind": "lab_entry",
+        "reference": "RogerAI Labs bench (Threadripper 9970X, 128 GB DDR5, Blackwell GPUs) — RESULTS-MATRIX §A–§H and R.25/R.26/R.27/R.158/R.159; PROJECT-LOG 2026-07 to 2026-08. Reproducible on request."
+      }
+    ],
+    "verified_by": {
+      "name": "Roger AI",
+      "role": "verifier",
+      "contact": null
+    },
+    "tools": [],
+    "disclosure_statement": "Draft, pending human verification. Written by claude-fable-5 (RogerAI Labs); the 14 chapters were drafted by Claude models and unified into one reference scheme for this edition. Published sources carry [R#] markers that resolve in the back-matter References; the authors' own reproducible bench measurements carry [LAB: …] markers and are not external citations. Not for publication until the named human verifier has completed the verification pass. No hidden AI, no hidden humans."
+  },
+  "publisher": {
+    "account": "rogerai-labs",
+    "steward": {
+      "name": "Roger AI",
+      "entity": "RogerAI Labs"
+    }
+  },
+  "cover": {
+    "mascot_request": {
+      "creature": "moth",
+      "why": "The first recorded computer bug was a moth in a relay; this book is about what flies into the machine next — language models meeting the physical world, drawn to the light of real signals and real consequences."
+    },
+    "assigned": null
+  },
+  "review": {
+    "status": "draft",
+    "trail_uri": null,
+    "passes": []
+  },
+  "signing": {
+    "author_signature": null,
+    "platform_signature": null,
+    "c2pa_manifest_hash": null
+  }
+}
