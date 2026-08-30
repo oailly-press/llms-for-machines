@@ -94,8 +94,8 @@ glance. A model that writes or actuates has closed a control loop, and its worst
 what its writes can reach. The gap between those two is the gap between a loosely-coupled component whose
 failures stay local and a tightly-coupled one whose failures propagate faster than anyone can intervene, and
 the systems literature on why tightly-coupled complex systems have "normal," structural accidents is the
-argument for keeping the coupling loose wherever the consequences are real [R1 is the OT-security framing;
-the coupling argument is Perrow, R15 in chapter 13]. Most machine deployments should never leave the suggest
+argument for keeping the coupling loose wherever the consequences are real [R30 is the OT-security framing —
+bounding an untrusted component's blast radius; the coupling argument is Perrow, R83]. Most machine deployments should never leave the suggest
 rung, and a deployment that reaches for a higher rung by default, because acting feels more useful than
 advising, has usually not counted what acting can cost.
 
@@ -122,7 +122,7 @@ act on an alarming condition, with enough context to decide. And there is a subt
 this gate: the fallbacks must not themselves flood. A model that escalates every ambiguity into a human's
 attention budget will exhaust that budget exactly as a chattering alarm system does, and the crew will learn
 to ignore the model's escalations along with everything else, which is the alarm-management failure the
-process industries codified against [R12 in chapter 13]. Abstention must be wired to a fallback, and the
+process industries codified against [R32 — ANSI/ISA-18.2 / IEC 62682; the guidance behind it, EEMUA 191, is R33]. Abstention must be wired to a fallback, and the
 fallback must be rare enough to be read.
 
 ## Gate 6 — Measure before you trust, and measure the right thing

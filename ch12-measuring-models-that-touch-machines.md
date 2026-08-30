@@ -20,7 +20,7 @@ questions, and the gap between them is where most disappointed deployments live.
 
 The reason is not that the leaderboard is careless. It is that a general benchmark measures a
 general capability, and a machine deployment is a specific system doing a specific job under
-specific failure economics. The sibling volume in this series, *Measure Twice*, is a whole book
+specific failure economics. The sibling volume in this series, *Measure Twice* `[R86]`, is a whole book
 about not fooling yourself with benchmark numbers, and everything it says holds here without
 amendment: a number without an error bar is a rumor, a surprising number gets re-measured before
 it is believed, and a comparison without a matched control is not a comparison. This chapter does
@@ -203,7 +203,7 @@ def rates(rows):
     ab = sum(r == "abstain" for r in answered)
     confident = [r for r in answered if r != "abstain"]
     wrong = sum(r == "wrong" for r in confident)
-    cw = wrong / n  # confident-wrong per frame presented
+    cw = wrong / n  # confident-wrong over ALL n frames presented (marginal)
     acc = (sum(r == "right" for r in confident) / len(confident)) if confident else float("nan")
     return acc, cw, ab / n, miss / n
 
@@ -244,6 +244,10 @@ for name, rows in (("incumbent", inc_rows), ("candidate", cand_rows)):
     print(f"{name:9s}  answered-acc {acc*100:5.1f}%  confident-wrong {cw*100:4.2f}%  "
           f"abstain {ab*100:4.1f}%  missing {miss*100:4.2f}%")
 
+paired_n = len(paired_cw)
+dropped = N - paired_n
+print(f"paired frames: {paired_n} of {N} presented "
+      f"(dropped {dropped} = {dropped/N*100:.2f}%, a missing on either side)")
 point = sum(paired_cw) / len(paired_cw)
 lo, hi = bootstrap_diff_ci(paired_cw)
 print(f"paired confident-wrong change (cand-inc): {point*100:+.2f} pts  "
@@ -258,6 +262,7 @@ print("verdict:", "SAFER (fewer confident-wrong, CI excludes 0)" if better
 ```output
 incumbent  answered-acc  94.4%  confident-wrong 4.75%  abstain 11.8%  missing 2.75%
 candidate  answered-acc  94.8%  confident-wrong 4.00%  abstain 20.2%  missing 3.00%
+paired frames: 377 of 400 presented (dropped 23 = 5.75%, a missing on either side)
 paired confident-wrong change (cand-inc): -1.33 pts  95% CI [-4.24, +1.59] pts
 verdict: indistinguishable on confident-wrong at this suite
 ```
@@ -268,7 +273,14 @@ answered, a lower confident-wrong rate, and much more abstention on the hard fra
 profile of a better-calibrated model that knows when to stay quiet. If this were a leaderboard, the
 candidate would win. But the paired comparison, which looks only at the frames where the two models'
 outcomes differ, brackets the change in confident-wrong rate at minus 1.33 points with a 95 percent
-interval that runs from minus 4.24 to plus 1.59 — and that interval includes zero. The honest verdict
+interval that runs from minus 4.24 to plus 1.59 — and that interval includes zero. Note the third line,
+which is easy to omit and load-bearing: the paired comparison runs on 377 of the 400 frames, not all
+400, because a frame with a *missing* on either side is dropped from the pair. That paired-drop rate —
+5.75 percent here — is larger than either model's marginal missing rate (2.75 and 3.00 percent), because
+a pair is lost whenever *either* side fails, and it defines the denominator behind the point estimate and
+the interval. A packet that printed only the marginal missing rates would let a reader assume the interval
+covered the full suite; on a plant network where fetch failures correlate across models, the paired-drop
+rate can climb while the marginal rates stay flat, and hiding it hides a bias. Report both, always. The honest verdict
 is not "the candidate is safer." It is "indistinguishable on confident-wrong at this suite," which is
 a polite way of saying that four hundred frames cannot resolve a one-point difference in a rate that is
 itself only a few percent, and that promoting the candidate on this evidence would be promoting it on

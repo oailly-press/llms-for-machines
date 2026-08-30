@@ -1,5 +1,7 @@
 # Chapter 1 — Machines Without Language
 
+*(draft v1, 2026-08-30 — written by claude-fable-5 (RogerAI Labs), unverified. Published sources carry `[R#]` markers resolved in the References; the author's own reproducible bench measurements carry `[LAB: …]` markers, stated with the apparatus and sample size that produced them. Per-chapter authorship is recorded in `manifest.json`.)*
+
 There is a page in a logbook, kept now behind glass at the Smithsonian, that engineers
 still photograph on their phones when they visit. It is dated 9 September 1947. Taped to
 it is a moth, pulled from between the relay contacts of the Harvard Mark II, and beside
@@ -224,7 +226,7 @@ deterministic feature summary of a single sensor channel and ask them to classif
 — is this signal stuck, railed, drifting, noisy, dropping out, or fine? — over a closed set
 of choices, with 300 channels balanced across the fault classes and the fault definitions
 spelled out in the prompt. Every model landed at or below chance. A thirty-line hand-written
-rule over the identical input scored 63% [LAB: RESULTS-MATRIX §R.26 — RogGentoo lab]. Scaling the
+rule over the identical input scored 63% [LAB: RESULTS-MATRIX §R.26 — n=300 balanced items, single deterministic run, seed-reproducible; Wilson 95% ≈ 57.7–68.6% — RogGentoo lab]. Scaling the
 model up a hundredfold changed nothing. The finding, stated at its strongest and now
 measured rather than asserted: general language models, as they come off the shelf, cannot
 read machines — not the small ones and not the large ones — because the task is simply
@@ -311,7 +313,7 @@ component in a control system is deterministic by design and by regulation: the 
 produce the same outputs, the behavior is specified, the failures are enumerable. A language
 model, sampling tokens, is not deterministic in that sense unless you make it so — and even at
 temperature zero, batching and hardware scheduling can shift outputs run to run, an effect the
-authors have measured directly on their own bench [LAB: RESULTS-MATRIX §C: a small tool-use suite swung by roughly ten points across identical back-to-back runs from batch- packing nondeterminism, not from sampling — RogGentoo lab]. A machine owner who assumes model output is
+authors have measured directly on their own bench [LAB: RESULTS-MATRIX §C: a small tool-use suite (n=15 scenarios) swung by roughly ten points across three identical back-to-back runs from batch-packing nondeterminism, not from sampling, with about a third of scenarios flipping between runs — RogGentoo lab]. A machine owner who assumes model output is
 reproducible the way PLC logic is reproducible has made a category error. Much of the
 engineering in this book — constrained decoding, enum scoring, evaluation with error bars —
 exists precisely to claw back as much determinism as the task allows and to measure honestly
@@ -376,7 +378,7 @@ number, so it is worth stating them once.
 
 Every benchmark number gets an error bar before it gets published, because small industrial
 test suites swing hard between identical runs — the authors have watched a fifteen-scenario
-tool suite move ten points from nondeterminism alone [LAB: RESULTS-MATRIX §C — RogGentoo lab]. This
+tool suite move ten points from nondeterminism alone [LAB: RESULTS-MATRIX §C — n=15 scenarios, spread across three runs — RogGentoo lab]. This
 is also the posture the public risk frameworks ask for: the NIST AI Risk Management Framework's
 MEASURE function calls for AI systems to be tested before deployment and regularly in operation,
 with the measurement itself documented [R4]. One

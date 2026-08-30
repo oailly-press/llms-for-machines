@@ -2,29 +2,107 @@
   "gate": "pass1",
   "version": "1.0",
   "date": "2026-08-30",
-  "book_dir": "books/llms-for-machines",
+  "book_dir": "/tmp/rev-lm",
   "verdict": "PASS",
   "reject_count": 0,
-  "warn_count": 0,
-  "findings": [],
+  "warn_count": 11,
+  "findings": [
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'python' listing not executed (--no-exec)",
+      "location": "ch03-sensors-and-the-signal-path.md:123"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'python' listing not executed (--no-exec)",
+      "location": "ch04-protocols-as-text.md:68"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'python' listing not executed (--no-exec)",
+      "location": "ch04-protocols-as-text.md:179"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'python' listing not executed (--no-exec)",
+      "location": "ch05-plants-and-brownfield.md:238"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'python' listing not executed (--no-exec)",
+      "location": "ch06-vehicles-and-mobile-equipment.md:75"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'python' listing not executed (--no-exec)",
+      "location": "ch07-robots-and-workcells.md:108"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'python' listing not executed (--no-exec)",
+      "location": "ch08-grids-energy-and-continuous-process.md:122"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'python' listing not executed (--no-exec)",
+      "location": "ch10-where-the-model-runs.md:29"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'python' listing not executed (--no-exec)",
+      "location": "ch11-authority-interlocks-and-abstention.md:63"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'python' listing not executed (--no-exec)",
+      "location": "ch12-measuring-models-that-touch-machines.md:179"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'python' listing not executed (--no-exec)",
+      "location": "ch14-a-field-guide-you-can-run.md:289"
+    }
+  ],
   "measured": {
-    "body_words_measured": 72689,
-    "print_equivalent_pages": 242,
+    "body_words_measured": 73890,
+    "print_equivalent_pages": 246,
     "chapter_words": {
-      "ch01-machines-without-language.md": 5516,
-      "ch02-what-a-language-model-is-allowed-to-touch.md": 5360,
-      "ch03-sensors-and-the-signal-path.md": 4825,
-      "ch04-protocols-as-text.md": 3868,
+      "ch01-machines-without-language.md": 5586,
+      "ch02-what-a-language-model-is-allowed-to-touch.md": 5446,
+      "ch03-sensors-and-the-signal-path.md": 5001,
+      "ch04-protocols-as-text.md": 3921,
       "ch05-plants-and-brownfield.md": 5554,
       "ch06-vehicles-and-mobile-equipment.md": 4843,
       "ch07-robots-and-workcells.md": 4647,
       "ch08-grids-energy-and-continuous-process.md": 4313,
-      "ch09-buildings-facilities-and-the-quiet-majority.md": 6036,
-      "ch10-where-the-model-runs.md": 4926,
-      "ch11-authority-interlocks-and-abstention.md": 5424,
-      "ch12-measuring-models-that-touch-machines.md": 5816,
+      "ch09-buildings-facilities-and-the-quiet-majority.md": 6077,
+      "ch10-where-the-model-runs.md": 5403,
+      "ch11-authority-interlocks-and-abstention.md": 5583,
+      "ch12-measuring-models-that-touch-machines.md": 5944,
       "ch13-failure-modes-the-physical-world-invents.md": 6078,
-      "ch14-a-field-guide-you-can-run.md": 5483
+      "ch14-a-field-guide-you-can-run.md": 5494
     },
     "padding_metrics": {
       "chapters": {
@@ -85,11 +163,11 @@
           "bullet_share": 0.0
         }
       },
-      "compression_ratio": 0.3409,
-      "near_duplicate_paragraph_share": 0.0,
+      "compression_ratio": 0.3421,
+      "near_duplicate_paragraph_share": 0.0066,
       "top_ngram": {
         "ngram": "*(draft v1, 2026-08-30 \u2014 written by",
-        "share": 9e-05
+        "share": 0.00014
       }
     }
   }

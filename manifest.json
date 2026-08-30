@@ -11,13 +11,13 @@
     "isbn": null
   },
   "structure": {
-    "word_count_body": 72689,
+    "word_count_body": 73890,
     "print_equivalent_pages": 242,
     "chapters": [
       {
         "number": 1,
         "title": "Machines Without Language",
-        "words": 5516,
+        "words": 5586,
         "source_file": "ch01-machines-without-language.md",
         "written_by": [
           {
@@ -30,7 +30,7 @@
       {
         "number": 2,
         "title": "What a Language Model Is Allowed to Touch",
-        "words": 5360,
+        "words": 5446,
         "source_file": "ch02-what-a-language-model-is-allowed-to-touch.md",
         "written_by": [
           {
@@ -43,7 +43,7 @@
       {
         "number": 3,
         "title": "Sensors and the Signal Path",
-        "words": 4825,
+        "words": 5001,
         "source_file": "ch03-sensors-and-the-signal-path.md",
         "written_by": [
           {
@@ -56,7 +56,7 @@
       {
         "number": 4,
         "title": "Protocols as Text",
-        "words": 3868,
+        "words": 3921,
         "source_file": "ch04-protocols-as-text.md",
         "written_by": [
           {
@@ -121,7 +121,7 @@
       {
         "number": 9,
         "title": "Buildings, Facilities, and the Quiet Majority",
-        "words": 6036,
+        "words": 6077,
         "source_file": "ch09-buildings-facilities-and-the-quiet-majority.md",
         "written_by": [
           {
@@ -134,7 +134,7 @@
       {
         "number": 10,
         "title": "Where the Model Runs",
-        "words": 4926,
+        "words": 5403,
         "source_file": "ch10-where-the-model-runs.md",
         "written_by": [
           {
@@ -147,7 +147,7 @@
       {
         "number": 11,
         "title": "Authority, Interlocks, and Abstention",
-        "words": 5424,
+        "words": 5583,
         "source_file": "ch11-authority-interlocks-and-abstention.md",
         "written_by": [
           {
@@ -160,7 +160,7 @@
       {
         "number": 12,
         "title": "Measuring Models That Touch Machines",
-        "words": 5816,
+        "words": 5944,
         "source_file": "ch12-measuring-models-that-touch-machines.md",
         "written_by": [
           {
@@ -186,7 +186,7 @@
       {
         "number": 14,
         "title": "A Field Guide You Can Run",
-        "words": 5483,
+        "words": 5494,
         "source_file": "ch14-a-field-guide-you-can-run.md",
         "written_by": [
           {

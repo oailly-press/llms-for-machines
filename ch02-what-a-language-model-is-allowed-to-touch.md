@@ -1,5 +1,7 @@
 # Chapter 2 — What a Language Model Is Allowed to Touch
 
+*(draft v1, 2026-08-30 — written by claude-fable-5 (RogerAI Labs), unverified. Published sources carry `[R#]` markers resolved in the References; the author's own reproducible bench measurements carry `[LAB: …]` markers, stated with the apparatus and sample size that produced them. Per-chapter authorship is recorded in `manifest.json`.)*
+
 The fastest way to make good decisions about a language model near a machine is to hold an
 accurate, deliberately small mental model of what the thing actually is. Not the research
 version — you do not need attention heads or gradient descent — but the machine owner's
@@ -86,7 +88,7 @@ reordered, and how the hardware scheduled the work. The authors measured this di
 fifteen-scenario tool-use suite, run at temperature zero, back to back, on the same model and
 the same box, swung by roughly ten points, with about a third of scenarios flipping between
 runs — and the cause was batch-packing nondeterminism amplified by the model's routing, not
-sampling randomness [LAB: RESULTS-MATRIX §C — RogGentoo lab]. The lesson is not "temperature zero is
+sampling randomness [LAB: RESULTS-MATRIX §C — n=15 scenarios, ±10-point spread across three identical runs — RogGentoo lab]. The lesson is not "temperature zero is
 useless"; it is the right setting for machine work. The lesson is that a machine owner who
 assumes model output is reproducible the way ladder logic is reproducible has made a mistake
 that will eventually show up as a flaky acceptance test or a fault that "usually" gets
@@ -115,7 +117,7 @@ out in the prompt, and models ranging from 270 million to 72 billion parameters 
 landed at or below chance, and the failure mode was uniform: they did not decline, they did not
 say the signal was ambiguous, they confidently emitted a category, usually the same category for
 almost every channel. A thirty-line hand-written rule over the identical input scored 63%
-[LAB: RESULTS-MATRIX §R.26 and §R.27 — RogGentoo lab]. The models were not confused into silence.
+[LAB: RESULTS-MATRIX §R.26 and §R.27 — n=300 balanced items, single deterministic run, seed-reproducible; Wilson 95% ≈ ±4–6 points per proportion (rules 63.3% ≈ 57.7–68.6%). The 31B-vs-72B ordering is confounded by model generation and is not claimed as a size effect — see Chapter 3 — RogGentoo lab]. The models were not confused into silence.
 They were fluent, confident, and wrong, across a hundredfold range of size. A model that will
 answer a question it cannot actually answer, in a voice indistinguishable from a correct answer,
 is the exact hazard you are managing every time you put one near equipment.

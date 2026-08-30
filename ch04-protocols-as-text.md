@@ -1,5 +1,7 @@
 # Chapter 4 — Protocols as Text
 
+*(draft v1, 2026-08-30 — written by claude-fable-5 (RogerAI Labs), unverified. Published sources carry `[R#]` markers resolved in the References; the author's own reproducible bench measurements carry `[LAB: …]` markers, stated with the apparatus and sample size that produced them. Per-chapter authorship is recorded in `manifest.json`.)*
+
 The previous chapter ended on a discouraging measurement: a general language model cannot read a
 sensor channel, because a sensor channel is a measurement with a history and that is not a genre
 the model was trained on. This chapter is the encouraging counterpart, and the difference between
@@ -254,7 +256,7 @@ Chapter 3 tested.
 The measured part comes with a caution the authors insist on stating plainly, because the
 temptation to over-read one's own numbers is exactly what this series exists to resist. On the
 sensor-fault classification task of Chapter 3, general models landed at chance and a thirty-line
-rule scored 63% [LAB: RESULTS-MATRIX §R.26/§R.27 — RogGentoo lab] — that is a measured result and it says
+rule scored 63% [LAB: RESULTS-MATRIX §R.26/§R.27 — n=300 balanced items, single deterministic run, seed-reproducible; Wilson 95% ≈ 57.7–68.6% — RogGentoo lab] — that is a measured result and it says
 the *interpretation* half of "reading the machine" is genuinely hard for general models even when
 the input is clean structure. The *framing* question — how much a model's accuracy on such tasks
 swings with the way the prompt is posed — the authors attempted to measure in a framing-threshold

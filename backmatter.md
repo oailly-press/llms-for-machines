@@ -16,7 +16,21 @@ records and reproducible on request. A `[LAB: …]` marker is **not** an externa
 and makes no claim of independent publication; it is a pointer into the authors' own
 apparatus, named so a reader can ask for the run. Where the text gives a number without
 either marker, the prose labels it unmeasured or refuses the claim. This mirrors the
-convention established in Industrial Nº 1, *Local LLMs for Manufacturing*.
+convention established in Industrial Nº 1, *Local LLMs for Manufacturing* `[R87]`.
+
+Because this book preaches error bars, it owes them on its own numbers, so each `[LAB: …]`
+marker carries the statistical framing the measurement actually supports — and no more. Where
+the lab record holds repeats, the marker gives the range, the ±, or a confidence interval and
+the sample size *n*. Where a number is a single observation, the marker says so plainly — "n=1,
+single run" — and, where the number is a proportion measured once, gives the Wilson interval its
+sample size implies rather than pretending the point value is exact. Two recurring cautions travel
+with specific numbers: the 15-scenario tool suite swings about ±10 points run-to-run from
+batch-packing nondeterminism, so its scores are reported as a spread across three runs; and a
+warmth audit of the spill-regime speculative-decoding ratios (RESULTS-MATRIX §I.4) means those
+exact multipliers await a warm, order-alternated re-run, so only the monotone trend is claimed
+from them. None of these intervals is invented to look rigorous; each is the honest width of the
+apparatus that produced the number, and where the apparatus cannot support a width, the marker
+says the number is a point observation, reproducible on the stated bench.
 
 ## Glossary
 
@@ -164,3 +178,7 @@ convention established in Industrial Nº 1, *Local LLMs for Manufacturing*.
 - **[R82]** IEEE Std 1588, Precision Time Protocol (PTP) for networked measurement and control. https://standards.ieee.org/ieee/1588/6825/
 - **[R83]** Perrow, C., *Normal Accidents: Living with High-Risk Technologies*, 1984 (interactive complexity and tight coupling). https://en.wikipedia.org/wiki/Normal_Accidents
 - **[R84]** Loss of the Mars Climate Orbiter to a units mismatch (a value meaning one thing to the producer and another to the reader). https://en.wikipedia.org/wiki/Mars_Climate_Orbiter
+- **[R85]** *Inference on the Edge — Quantization, speculation, and the physics of local models*, RogerAI Labs, O'AILLY Industrial Series Nº 2. AIBN 297-00-0000007-3. https://oailly.com/read/rogerai-labs--inference-on-the-edge/ (the sibling volume that derives the memory-bandwidth wall, quantization arithmetic, and speculative-decoding economics this book cites rather than re-derives).
+- **[R86]** *Measure Twice — A field guide to honest LLM benchmarking*, RogerAI Labs, O'AILLY Systems & Craft. AIBN 297-00-0000010-3. https://oailly.com/read/rogerai-labs--measure-twice/ (the sibling volume on benchmarking discipline — error bars, contamination, paired comparison — that Chapter 12 assumes).
+- **[R87]** *Local LLMs for Manufacturing — Small language models on the plant floor*, RogerAI Labs, O'AILLY Industrial Series Nº 1. AIBN 297-00-0000001-1. https://oailly.com/read/rogerai-labs--local-llms-for-manufacturing/ (Industrial Nº 1, which established the [R#]/[LAB:] citation convention this volume follows).
+- **[R88]** *The Abstention Reader — Cases for machines that must know when not to answer*, RogerAI Labs, O'AILLY for Machine Readers. AIBN 297-00-0000008-0. https://oailly.com/read/rogerai-labs--the-abstention-reader/ (the machine-readers volume built around applying selective-prediction to machine data, referenced in Chapter 11).

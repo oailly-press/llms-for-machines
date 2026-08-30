@@ -1,5 +1,7 @@
 # Chapter 3 — Sensors and the Signal Path
 
+*(draft v1, 2026-08-30 — written by claude-fable-5 (RogerAI Labs), unverified. Published sources carry `[R#]` markers resolved in the References; the author's own reproducible bench measurements carry `[LAB: …]` markers, stated with the apparatus and sample size that produced them. Per-chapter authorship is recorded in `manifest.json`.)*
+
 A model on the chill line reads this object from the historian feed:
 
 ```json
@@ -142,8 +144,8 @@ def decode(counts, ts):                 # value AND a status the reader must res
            "value": None, "unit": EU, "status": "GOOD"}
     if ma < 3.6:                        # NE43 low: broken loop
         rec["status"] = "BAD_WIRE_BREAK"; return rec
-    if ma > 20.5:                       # NE43 high: over-range / short
-        rec["status"] = "BAD_OVER_RANGE"; return rec
+    if ma > 21.0:                       # NE43 high fault: >21.0 mA (20.0-21.0
+        rec["status"] = "BAD_OVER_RANGE"; return rec  # is valid over-range, not a fault)
     frac = (ma - I_MIN_MA) / (I_MAX_MA - I_MIN_MA)
     rec["value"] = round(EU_MIN + frac * (EU_MAX - EU_MIN), 2)
     return rec
@@ -366,16 +368,15 @@ the enum-scoring decoder from Chapter 2 so the answer is guaranteed valid and co
 Across 300 channels balanced at exactly fifty per fault class, and across models spanning a
 hundredfold range in size — a 270-million-parameter model, a sub-one-billion model, a 27-billion,
 and, on an identical grammar-constrained harness, a 31-billion and a 72-billion — every model
-landed at or below chance on the fault axis [LAB: RESULTS-MATRIX §R.26 and §R.27; chance on six balanced classes is 16.7% — RogGentoo lab]. The smallest predicted a single class for nearly every channel.
-The 27-billion scored 14.3%, below chance. And in the cleanest size comparison — the 31B and 72B
-run on identical prompt, grammar, and decode — the 31B scored 43% and the 72B scored 32%, so *more
-than twice the parameters read machines worse* [LAB: RESULTS-MATRIX §R.27 — RogGentoo lab]. Capability on this task is
-not a function of scale.
+landed at or below chance on the fault axis [LAB: RESULTS-MATRIX §R.26 and §R.27; chance on six balanced classes is 16.7%; n=300 balanced items, a single deterministic enum-scored run, seed 20260811, byte-reproducible. On n=300 a proportion carries a Wilson 95% interval of roughly ±4–6 points, so the scores below are point observations with that width, not exact values — RogGentoo lab]. The smallest predicted a single class for nearly every channel.
+The 27-billion scored 14.3% (Wilson 95% ≈ 10.8–18.7%), at or below chance. And in the cleanest size comparison — the 31B and 72B
+run on identical prompt, grammar, and decode — the 31B scored 43% (≈ 37.5–48.7%) and the 72B scored 32% (≈ 27.3–37.8%) [LAB: RESULTS-MATRIX §R.27 — RogGentoo lab]. It is tempting to read that as *more than twice the parameters reading machines worse*, but the honest version is narrower: the two models are a generation apart — the 31B is a 2026-vintage model and the 72B a 2024 one — so the ordering is confounded by model generation and this lab downgraded the bare size claim to provisional. What survives the confound, and is all the argument needs, is that *both* large models sit far below the thirty-line rule baseline, and neither acquires the fault classes that require combining features. Capability on this task is
+not simply a function of scale.
 
 The result would mean nothing without its control, and the control is what makes it a finding
 rather than a complaint about the authors' features. A hand-written rule — roughly thirty lines of
 if-statements over the *identical* feature summary, the fault definitions transcribed directly —
-scored 63.3%, with strong per-class recall on the faults the models collapsed [LAB: RESULTS-MATRIX §R.26 — RogGentoo lab]. So the signal is present and legible in the exact input the models received. A model at
+scored 63.3% (Wilson 95% ≈ 57.7–68.6% on the same n=300), with strong per-class recall on the faults the models collapsed [LAB: RESULTS-MATRIX §R.26 — RogGentoo lab]. So the signal is present and legible in the exact input the models received. A model at
 chance on an input a thirty-line rule reads at 63% is not suffering from a bad feature layer. It
 is telling you something about the model. Three further checks ruled out the harness: the scorer
 was verified on a known answer (the France-capital probe from Chapter 2), the prompt was printed
